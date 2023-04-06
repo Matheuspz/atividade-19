@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            margin: 0px;
+            height: 100vh;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            justify-items: center;
+            align-items: center;
+            align-content: center;
+            overflow: hidden;
+        }
+        .boneco {
+            
+            position: absolute;
+            left: 600px;
+            top: 450px;
+        }
+
+        .texto_rs {
+            position: absolute;
+            display: none;
+            top: 100px;
+        }
+        .texto_sc {
+            position: absolute;
+            display: none;
+            top: 100px;
+        }
+
+    </style>
+</head>
+<body>
+
+    <map name="meu_mapa">
+        <area onmouseleave="Esconder();" onmouseover="MostraTexto('RS');" shape="circle" coords="257,441,20" 
+        href="https://pt.wikipedia.org/wiki/Rio_Grande_do_Sul" target="_blank"> <!--RS X-->
+
+        <area onmouseleave="Esconder();" onmouseover="MostraTexto('SC');" shape="circle" coords="296,410,20" 
+        href="https://pt.wikipedia.org/wiki/Santa_Catarina" target="_blank"> <!--SC  X-->
+
+        <area shape="circle" coords="279,378,20" href="https://pt.wikipedia.org/wiki/Paran%C3%A1" target="_blank">  <!--PR  X-->
+
+        <area shape="circle" coords="315,347,20" href="https://pt.wikipedia.org/wiki/Paulo_de_Tarso" target="_blank"> <!--SP  X -->
+
+        <area shape="circle" coords="241, 332,20" href="https://pt.wikipedia.org/wiki/Mato_Grosso_do_Sul" target="_blank"> <!--MS -->
+
+        <area shape="circle" coords="394, 363,20" href="https://pt.wikipedia.org/wiki/Rio_de_Janeiro" target="_blank"> <!--RJ -->
+
+        <area shape="circle" coords="421, 324,20" href="https://pt.wikipedia.org/wiki/Esp%C3%ADrito_Santo" target="_blank"> <!--ES -->
+
+        <area shape="circle" coords="296, 274,20" href="https://pt.wikipedia.org/wiki/Goi%C3%A1s" target="_blank"> <!-- GO-->
+
+        <area shape="circle" coords="325, 268,20" href="https://pt.wikipedia.org/wiki/Distrito_federal" target="_blank"> <!--DF -->
+
+        <area shape="circle" coords="363, 310,20" href="https://pt.wikipedia.org/wiki/Mato_Grosso" target="_blank"> <!-- MG-->
+        <area shape="circle" coords="140, 206,20" href="https://pt.wikipedia.org/wiki/Rond%C3%B4nia" target="_blank"> <!--RO -->
+        <area shape="circle" coords="322, 192,20" href="https://pt.wikipedia.org/wiki/Tocantins" target="_blank"> <!--TO -->
+        <area shape="circle" coords="400,224,20" href="https://pt.wikipedia.org/wiki/Bahia" target="_blank"> <!--BA -->
+        <area shape="circle" coords="388, 172,20" href="https://pt.wikipedia.org/wiki/Pi" target="_blank"> <!--PI -->
+        <area shape="circle" coords="364, 129,20" href="https://pt.wikipedia.org/wiki/Maranh%C3%A3o" target="_blank"> <!-- MA-->
+        <area shape="circle" coords="430, 140,20" href="https://pt.wikipedia.org/wiki/Cear%C3%A1" target="_blank"> <!--CE -->
+        <area shape="circle" coords="470, 151,20" href="https://pt.wikipedia.org/wiki/Rio_Grande_do_Norte" target="_blank"> <!-- RN-->
+        <area shape="circle" coords="477, 168,20" href="https://pt.wikipedia.org/wiki/Para%C3%ADba" target="_blank"> <!--PB -->
+        <area shape="circle" coords="470, 149,20" href="https://pt.wikipedia.org/wiki/Pernambuco" target="_blank"> <!--PE -->
+        <area shape="circle" coords="470, 197,20" href="https://pt.wikipedia.org/wiki/Alagoas" target="_blank"><!-- AL-->
+        <area shape="circle" coords="454, 212,20" href="https://pt.wikipedia.org/wiki/Sergipe" target="_blank"> <!-- SE-->
+        <area shape="circle" coords="265, 137,20" href="https://pt.wikipedia.org/wiki/Par%C3%A1" target="_blank"> <!--PA -->
+        <area shape="circle" coords="285, 49,20" href="https://pt.wikipedia.org/wiki/Amap%C3%A1" target="_blank"> <!--AP -->
+        <area shape="circle" coords="154, 43,20" href="https://pt.wikipedia.org/wiki/Roraima" target="_blank"> <!-- RR-->
+        <area shape="circle" coords="117, 125,20" href="https://pt.wikipedia.org/wiki/Amazonas" target="_blank"> <!-- AM-->
+        <area shape="circle" coords="40, 186,20" href="https://pt.wikipedia.org/wiki/Acre" target="_blank"> <!--AC -->
+        <area shape="circle" coords="230, 232,20" href="https://pt.wikipedia.org/wiki/Acre" target="_blank"> <!--MT -->
+    </map>
+
+    <div class="texto_rs" id="texto_rs">
+        Aqui fica Rio Grande do Sul
+    </div>
+    <div class="texto_sc" id="texto_sc">
+        Aqui fica Santa Catarina
+    </div>
+
+    <img src="boneco.gif" class="boneco" id="boneco" width="80px">
+    <img src="mapa_brasil.jpg" class="mapa" usemap="#meu_mapa">
+
+</body>
+
+    <script>
+        function Esconder() {
+            texto_rs.style.display="none";
+            texto_sc.style.display="none";
+        }
+        function MostraTexto(estado) {
+            if(estado == "RS")
+            {
+                texto_rs.style.display="block";
+            }
+            if(estado == "SC")
+            {
+                texto_sc.style.display="block";
+            }
+        }
+    </script>
+
+</html>
